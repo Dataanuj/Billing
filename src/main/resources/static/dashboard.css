@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    color: black;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    
+}
+
+.sidebar ul li:hover {
+    background: #444;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: rgb(255, 247, 215);
+}
+
+.section {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Hidden state */
+#productForm.hidden,#customerForm.hidden{
+    display: none;
+}
+
+
+
+/* Form container */
+#productForm,#customerForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    padding: 30px;
+    margin-top: 25px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 
+        0 15px 35px rgba(0,0,0,0.08),
+        0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+    animation: fadeIn 0.35s ease;
+}
+
+/* Smooth appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inputs + Select */
+#productForm input,
+#productForm select,#customerForm input,#customerForm select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background: #f9fafb;
+    color: #111827;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Placeholder */
+#productForm input::placeholder,#customerForm input::placeholder {
+    color: #9ca3af;
+}
+
+/* Focus */
+#productForm input:focus,
+#productForm select:focus,#customerForm input:focus,#customerForm select:focus{
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
+    transform: translateY(-2px);
+}
+
+/* Select dropdown */
+#productForm select,#customerForm select {
+    cursor: pointer;
+}
+
+/* Submit button */
+#productForm button ,#customerForm button{
+    grid-column: span 2;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 10px 20px rgba(37,99,235,0.25);
+}
+
+/* Hover effect */
+#productForm button:hover,#customerForm button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(124,58,237,0.35);
+}
+
+/* Active effect */
+#productForm button:active,#customerForm button:active {
+    transform: scale(0.98);
+}
+
+#openProductForm,#openCustomerForm{
+    padding: 14px 22px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.35);
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#openProductForm:hover,#openCustomerForm{
+    transform: translateY(-2px);
+}
